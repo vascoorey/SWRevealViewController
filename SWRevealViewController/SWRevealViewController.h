@@ -303,6 +303,10 @@ typedef NS_ENUM(NSInteger, SWRevealToggleAnimationType)
 // clipping your front view to this controller bounds.
 @property (nonatomic) BOOL extendsPointInsideHit;
 
+// Load any defined front/rear controllers from the storyboard
+// This method is intended to be overrided in case the default behavior will not meet your needs
+- (void)loadStoryboardControllers;
+
 /* The class properly handles all the relevant calls to appearance methods on the contained controllers.
    Moreover you can assign a delegate to let the class inform you on positions and animation activity */
 
